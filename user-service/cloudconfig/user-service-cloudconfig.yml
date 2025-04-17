@@ -1,1 +1,38 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/user_service_db
+    username: postgres
+    password: Nadi.3344
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://127.0.0.1:8089/realms/qonys
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: user-service
+            client-secret: mwD49tbkyxXti0rKswzKY8aGy3iJc6jq
+            scope:
+              - openid
+              - microprofile-jwt
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
 
