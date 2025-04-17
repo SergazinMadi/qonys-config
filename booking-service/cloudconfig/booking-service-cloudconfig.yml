@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5435/booking_service_db
-    username: postgres
-    password: Nadi.3344
+    # username: postgres
+    # password: Nadi.3344
 
   jpa:
     show-sql: true
