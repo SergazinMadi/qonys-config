@@ -3,7 +3,12 @@ spring:
     url: jdbc:postgresql://localhost:5435/booking_service_db
     username: postgres
     password: Nadi.3344
-
+  web:
+    cors:
+      allowed-origins: "http://192.168.0.7:8086"  # URL твоего API Gateway
+      allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
+      allowed-headers: "*"
+      allow-credentials: true
   jpa:
     show-sql: true
     hibernate:
